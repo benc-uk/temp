@@ -1,0 +1,16 @@
+name: Release Binaries
+
+on:
+  push:
+    tags:
+      - "*"
+
+jobs:
+  auto-release:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Build Devcontainers
+        run: |
+          echo IMAGE_TAG=${{ github.ref }}
+
