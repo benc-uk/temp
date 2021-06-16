@@ -12,5 +12,5 @@ jobs:
     steps:
       - name: Build Devcontainers
         run: |
-          echo IMAGE_TAG=${{ github.ref }}
+          echo ${{ toJSON(github) }}
 
